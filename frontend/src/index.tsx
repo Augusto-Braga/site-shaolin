@@ -1,13 +1,36 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-ReactDOM.render(
+import HomePage from "./pages/HomePage";
+import Band from "./pages/Band";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <HomePage />,
+      },
+      {
+        path: "/band",
+        element: <Band />,
+      },
+    ],
+  },
+]);
+
+const domNode: HTMLElement = document.getElementById("root")!;
+const root = ReactDOM.createRoot(domNode);
+
+root.render(
   <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
+    <RouterProvider router={router} />
+  </React.StrictMode>
 );
 
 reportWebVitals();

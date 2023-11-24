@@ -6,6 +6,9 @@ module.exports = {
       fontFamily: {
         primary: "Shikamaru",
       },
+      colors: {
+        shaolinRed: "#EC091D",
+      },
     },
   },
   plugins: [],
