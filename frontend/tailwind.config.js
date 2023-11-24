@@ -9,6 +9,10 @@ module.exports = {
       colors: {
         shaolinRed: "#EC091D",
       },
+      height: {
+        header: "100px",
+        content: "calc(100vh - 100px)",
+      },
     },
   },
   plugins: [],

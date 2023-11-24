@@ -1,11 +1,12 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import RoundButton from "./components/RoundButton";
 import "./index.css";
 
 function App() {
   return (
     <div>
-      <div className="bg-black text-white h-24 flex items-center font-primary relative">
+      <div className="bg-black text-white h-header flex items-center font-primary relative">
         <nav className="flex absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <Link
             to="/band"
@@ -39,8 +40,12 @@ function App() {
             MÍDIA
           </Link>
         </nav>
-        <div className="bg-shaolinRed w-40 flex-wrap absolute right-64">
-          <p>oi</p>
+        <div className="absolute right-64">
+          <RoundButton
+            text="@USESHAOLIN"
+            link="https://www.instagram.com/useshaolin/"
+            target="_blank"
+          ></RoundButton>
         </div>
       </div>
       <Outlet />
