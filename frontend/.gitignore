@@ -24,6 +24,6 @@ yarn-error.log*
 
 # assets
 
-/public/assets
+assets
 
 README.md
